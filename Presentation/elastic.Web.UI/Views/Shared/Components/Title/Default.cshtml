@@ -1,0 +1,7 @@
+﻿@model TitleViewModel
+
+@{ 
+    var title = $"{Model.DefaultTitle} {Model.Seperator}{(string.IsNullOrEmpty(Model.Title) ? "" : $" {Model.Title}")}";
+}
+
+<title>@title</title>

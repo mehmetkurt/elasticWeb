@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/elastic.css",
+    "inputFile": "wwwroot/scss/elastic/elastic.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/home.css",
+    "inputFile": "wwwroot/scss/elastic/pages/home.scss"
+  }
+]

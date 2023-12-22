@@ -1,9 +1,22 @@
-@using Umbraco.Extensions
-@using elastic.Web.UI
-@using Umbraco.Cms.Web.Common.PublishedModels
-@using Umbraco.Cms.Web.Common.Views
-@using Umbraco.Cms.Core.Models.PublishedContent
-@using Microsoft.AspNetCore.Html
+@inherits elastic.Umbraco.Framework.Mvc.Razor.ElasticRazorPage<TModel>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, Smidge
 @inject Smidge.SmidgeHelper SmidgeHelper
+@inject IRuntimeMinifier RuntimeMinifier
+@inject IOptions<HostingSettings> UmbracoHostingSettings
+
+@using Microsoft.AspNetCore.Html
+@using Microsoft.Extensions.Options
+
+@using Umbraco.Extensions
+
+@using Umbraco.Cms.Core.WebAssets
+@using Umbraco.Cms.Core.Configuration.Models
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@using Umbraco.Cms.Web.Common.Views
+
+@using elastic.Web.UI
+@using elastic.Web.Models
+@using elastic.Web.Models.Dto
+@using elastic.Web.UI.Components

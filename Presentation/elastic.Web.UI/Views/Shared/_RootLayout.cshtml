@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.all.min.css");
+    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.all.min.css");
+    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-light.css");
+    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-regular.css");
+    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-solid.css");
+    SmidgeHelper.RequiresCss("~/css/elastic.min.css");
+    SmidgeHelper.RequiresJs("~/scripts/elastic.js");
+}
+
+<!DOCTYPE html>
+<html lang="@CurrentLanguageCode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @await Component.InvokeAsync(typeof(TitleViewComponent))
+    @await SmidgeHelper.CssHereAsync(debug: UmbracoHostingSettings.Value.Debug)
+</head>
+<body>
+    <main class="elastic">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                        @await Component.InvokeAsync(typeof(HeaderLogoViewComponent))
+                    </div>
+                    <div class="col">
+                        <nav class="elastic-mega-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">elastic</a>
+                                    <div class="sub-container">
+                                        <div class="row">
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                            <div class="col-12"><a href="#">Item 1</a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">hizmetler</a>
+                                    <div class="sub-container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#">Item 1</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-1">
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+
+    @RenderBody()
+    @await SmidgeHelper.JsHereAsync(debug: UmbracoHostingSettings.Value.Debug)
+</body>
+
+</html>

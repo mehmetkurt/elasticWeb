@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Infrastructure" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
