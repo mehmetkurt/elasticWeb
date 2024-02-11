@@ -20,7 +20,7 @@ namespace elastic.Web.Models
 {
 	/// <summary>HomePage</summary>
 	[PublishedModel("HomePageModel")]
-	public partial class HomePageModel : PublishedContentModel, IPageTitleComposition
+	public partial class HomePageModel : PublishedContentModel, IMetaInformationComposition
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -55,6 +55,6 @@ namespace elastic.Web.Models
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitleCompositionTitle")]
-		public virtual string PageTitleCompositionTitle => global::elastic.Web.Models.PageTitleComposition.GetPageTitleCompositionTitle(this, _publishedValueFallback);
+		public virtual string PageTitleCompositionTitle => global::elastic.Web.Models.MetaInformationComposition.GetPageTitleCompositionTitle(this, _publishedValueFallback);
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using Umbraco.Cms.Core.Models.PublishedContent;
 
-namespace elastic.Web.Models.Dto;
+namespace elastic.Web.Models.ViewModels;
 public record TitleViewModel
 { 
     public string Title { get; set; }

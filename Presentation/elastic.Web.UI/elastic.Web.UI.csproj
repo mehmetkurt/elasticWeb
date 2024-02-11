@@ -4,14 +4,25 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="wwwroot\NewFolder\**" />
+	  <Compile Remove="wwwroot\scss\elastic\umbraco\NewFolder\**" />
+	  <Content Remove="wwwroot\NewFolder\**" />
+	  <Content Remove="wwwroot\scss\elastic\umbraco\NewFolder\**" />
+	  <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+	  <EmbeddedResource Remove="wwwroot\scss\elastic\umbraco\NewFolder\**" />
+	  <None Remove="wwwroot\NewFolder\**" />
+	  <None Remove="wwwroot\scss\elastic\umbraco\NewFolder\**" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Content Remove="compilerconfig.json" />
+	  <Content Remove="wwwroot\scss\elastic\umbraco\blockgrid - Copy.scss" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Include="app_plugins\placeholder.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms" Version="13.0.3" />
+		<PackageReference Include="Umbraco.Cms" Version="13.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -28,7 +39,6 @@
 	  <Folder Include="Infrastructure\" />
 	  <Folder Include="umbraco\" />
 	  <Folder Include="wwwroot\media\" />
-	  <Folder Include="wwwroot\NewFolder\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -43,6 +53,8 @@
 	  <None Include="wwwroot\css\fontawesome\fonts\fa-solid-900.woff2" />
 	  <None Include="wwwroot\css\fontawesome\fonts\fa-thin-100.woff2" />
 	  <None Include="wwwroot\css\fontawesome\fonts\fa-v4compatibility.woff2" />
+	  <None Include="wwwroot\scss\elastic\umbraco\blockgrid - Copy.scss" />
+	  <None Include="wwwroot\scss\elastic\umbraco\blockgrid.scss" />
 	</ItemGroup>
 
 	<PropertyGroup>

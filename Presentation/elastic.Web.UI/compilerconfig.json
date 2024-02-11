@@ -6,5 +6,21 @@
   {
     "outputFile": "wwwroot/css/home.css",
     "inputFile": "wwwroot/scss/elastic/pages/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/blockgrid.css",
+    "inputFile": "wwwroot/scss/elastic/umbraco/blockgrid.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/blockgrid_admin.css",
+    "inputFile": "wwwroot/scss/elastic/umbraco/blockgrid_admin.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/swiper.css",
+    "inputFile": "wwwroot/scss/swiper/swiper.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/components/slider.css",
+    "inputFile": "wwwroot/scss/elastic/components/slider.scss"
   }
 ]

@@ -1,9 +1,14 @@
 @import 'fonts';
 @import 'utils';
 
-@import "../bootstrap/root";
+@import '../bootstrap/root';
 @import '../bootstrap/reboot';
 @import '../bootstrap/bootstrap-grid';
+@import '../bootstrap/images';
+@import '../bootstrap/buttons';
+@import '../bootstrap/utilities';
+@import '../bootstrap/utilities/api';
 
+@import 'layout';
 @import 'components/header';
 @import 'components/navigation';

@@ -1,7 +1,6 @@
 ﻿@model HomePageModel
-
-@{ 
-    SmidgeHelper.RequiresJs("~/scripts/swiper.min.js");
-}
-
-<p>Selamlar</p>
+<div class="page">
+    <div class="home-page">
+        @await Component.InvokeAsync(typeof(SliderViewComponent))
+    </div>
+</div>

@@ -308,7 +308,7 @@ $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
-$dark:          $gray-900;
+$dark:          $black;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -372,18 +372,18 @@ $escaped-characters: (
 
 $enable-caret:                true;
 $enable-rounded:              true;
-$enable-shadows:              false;
+$enable-shadows:              true;
 $enable-gradients:            false;
-$enable-transitions:          true;
-$enable-reduced-motion:       true;
+$enable-transitions:          false;
+$enable-reduced-motion:       false;
 $enable-smooth-scroll:        true;
 $enable-grid-classes:         true;
 $enable-container-classes:    true;
-$enable-cssgrid:              false;
+$enable-cssgrid:              true;
 $enable-button-pointers:      true;
 $enable-rfs:                  true;
 $enable-validation-icons:     true;
-$enable-negative-margins:     false;
+$enable-negative-margins:     true;
 $enable-deprecation-messages: true;
 $enable-important-utilities:  true;
 
@@ -439,13 +439,13 @@ $position-values: (
 
 $body-text-align:           null;
 $body-color:                $gray-900;
-$body-bg:                   $white;
+$body-bg:                   $gray-100;
 
 $body-secondary-color:      rgba($body-color, .75);
-$body-secondary-bg:         $gray-200;
+$body-secondary-bg:         $white;
 
 $body-tertiary-color:       rgba($body-color, .5);
-$body-tertiary-bg:          $gray-100;
+$body-tertiary-bg:          $gray-200;
 
 $body-emphasis-color:       $black;
 
@@ -547,11 +547,11 @@ $border-color-translucent:    rgba($black, .175);
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem;
-$border-radius-sm:            .25rem;
-$border-radius-lg:            .5rem;
-$border-radius-xl:            1rem;
-$border-radius-xxl:           2rem;
+$border-radius:               50rem;
+$border-radius-sm:            50rem;
+$border-radius-lg:            50rem;
+$border-radius-xl:            50rem;
+$border-radius-xxl:           50rem;
 $border-radius-pill:          50rem;
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -789,8 +789,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem;
-$input-btn-padding-x:         .75rem;
+$input-btn-padding-y:         .475rem;
+$input-btn-padding-x:         1rem;
 $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-base;
 $input-btn-line-height:       $line-height-base;

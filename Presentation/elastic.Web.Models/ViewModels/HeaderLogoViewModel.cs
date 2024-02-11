@@ -1,4 +1,4 @@
-﻿namespace elastic.Web.Models.Dto;
+﻿namespace elastic.Web.Models.ViewModels;
 public record HeaderLogoViewModel
 {
     public string DesktopLogoPath { get; set; }

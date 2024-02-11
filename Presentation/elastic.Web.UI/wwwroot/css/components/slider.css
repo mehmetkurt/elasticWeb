@@ -1,0 +1,65 @@
+﻿/*// elastic variables
+$base-font-family: 'Comfortaa', sans-serif;*/
+:root {
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: calc(100% - 60px);
+  --swiper-navigation-sides-offset: 0;
+  --swiper-navigation-color: #fff;
+}
+
+.swiper.component.slider {
+  position: relative;
+  background-color: #f8f9fa;
+}
+.swiper.component.slider [class^=swiper-button-] {
+  background-color: #D15032;
+  top: initial;
+  left: initial;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+}
+.swiper.component.slider [class^=swiper-button-][class$=prev] {
+  right: 60px;
+  border-top-left-radius: 100px;
+  width: auto;
+  padding-right: 20px;
+}
+.swiper.component.slider [class^=swiper-button-][class$=prev]:after {
+  padding-left: 40px;
+}
+.swiper.component.slider .component-item {
+  padding: 100px;
+}
+.swiper.component.slider .component-item .slider-info-head {
+  margin: 0;
+  padding: 0;
+  line-height: 70px;
+}
+.swiper.component.slider .component-item .slider-info-head span {
+  font-size: 55px;
+  font-weight: 300;
+}
+.swiper.component.slider .component-item .slider-info-head span.br {
+  display: block;
+  font-weight: bold;
+}
+.swiper.component.slider .component-item .slider-info-buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.swiper.component.slider .component-item .slider-info-buttons .btn {
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  font-weight: bold;
+}
+.swiper.component.slider .component-item .slider-info-buttons .btn i {
+  font-size: 20px;
+}

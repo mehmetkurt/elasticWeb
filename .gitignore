@@ -456,6 +456,8 @@ FodyWeavers.xsd
 
 #ignore umbraco data/views/settings
 **/umbraco/
+#ignore umbraco data/views/settings
+!**/wwwroot/**/umbraco/
 
 #include default location for modelsbuilder output
 !**/umbraco/models

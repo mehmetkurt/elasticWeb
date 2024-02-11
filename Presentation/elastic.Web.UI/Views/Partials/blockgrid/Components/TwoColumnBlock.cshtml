@@ -1,0 +1,8 @@
+﻿@model BlockGridItem<TwoColumnBlock>
+
+@{
+    var hasImageBlock = Model.Areas.SelectRecursive(p => p.SelectMany(p => p.Areas));
+}
+<section class="elastic-column elastic-two-column menu-container">
+    @await Html.GetBlockGridItemAreasHtmlAsync(Model)
+</section>

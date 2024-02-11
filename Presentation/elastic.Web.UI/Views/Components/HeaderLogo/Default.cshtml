@@ -1,10 +1,8 @@
 ﻿@model HeaderLogoViewModel
 
 <a href="@Model.Link" class="d-none d-lg-block" title="@Model.Title" target="@Model.Target">
-    <img src="@Model.DesktopLogoPath" alt="@Model.AlternateText" />
-    desk
+    <img src="@Model.DesktopLogoPath" alt="@Model.AlternateText" class="img-fluid" />
 </a>
 <a href="@Model.Link" class="d-block d-lg-none" title="@Model.Title" target="@Model.Target">
-    <img src="@Model.MobileLogoPath" alt="@Model.AlternateText" />
-    mobile
+    <img src="@Model.MobileLogoPath" alt="@Model.AlternateText" class="img-fluid" />
 </a>

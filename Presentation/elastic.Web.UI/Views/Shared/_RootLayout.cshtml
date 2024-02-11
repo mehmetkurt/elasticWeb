@@ -1,12 +1,19 @@
 ﻿@{
     Layout = null;
-    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.all.min.css");
-    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.all.min.css");
-    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-light.css");
-    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-regular.css");
-    SmidgeHelper.RequiresCss("~/css/fontawesome/css/font-awesome.sharp-solid.css");
-    SmidgeHelper.RequiresCss("~/css/elastic.min.css");
-    SmidgeHelper.RequiresJs("~/scripts/elastic.js");
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/fontawesome/css/font-awesome.all.min.css") { Order = 10 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/fontawesome/css/font-awesome.all.min.css") { Order = 12 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/fontawesome/css/font-awesome.sharp-light.css") { Order = 14});
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/fontawesome/css/font-awesome.sharp-regular.css") { Order = 16 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/fontawesome/css/font-awesome.sharp-solid.css") { Order = 18 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/animate.min.css") { Order = 100 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/blockgrid.min.css") { Order = 200 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/swiper.min.css") { Order = 300 });
+    SmidgeHelper.RequiresCss(new Smidge.Models.CssFile("~/css/elastic.min.css") { Order = 400 });
+    SmidgeHelper.RequiresJs(new Smidge.Models.JavaScriptFile("~/scripts/lodash.js") { Order = 0 });
+    SmidgeHelper.RequiresJs(new Smidge.Models.JavaScriptFile("~/scripts/elastic.intent.js") { Order = 100 });
+    SmidgeHelper.RequiresJs(new Smidge.Models.JavaScriptFile("~/scripts/elastic.megamenu.js") { Order = 110 });
+    SmidgeHelper.RequiresJs(new Smidge.Models.JavaScriptFile("~/scripts/swiper.min.js") { Order = 200 });
+    SmidgeHelper.RequiresJs(new Smidge.Models.JavaScriptFile("~/scripts/elastic.js") { Order = 300 });
 }
 
 <!DOCTYPE html>
@@ -19,52 +26,36 @@
 </head>
 <body>
     <main class="elastic">
-        <header>
+        <header class="elastic-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                <div class="row gx-5 justify-content-center align-items-stretch">
+                    <div class="col-6 col-lg-4 col-xl-3 col-xxl-2">
                         @await Component.InvokeAsync(typeof(HeaderLogoViewComponent))
                     </div>
                     <div class="col">
-                        <nav class="elastic-mega-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">elastic</a>
-                                    <div class="sub-container">
-                                        <div class="row">
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                            <div class="col-12"><a href="#">Item 1</a></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">hizmetler</a>
-                                    <div class="sub-container">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <a href="#">Item 1</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
+                        @await Component.InvokeAsync(typeof(TopNavigationViewComponent))
                     </div>
 
                     <div class="col-1">
-                        <i class="fa-regular fa-magnifying-glass"></i>
+                        @await Component.InvokeAsync(typeof(SearchViewComponent))
                     </div>
                 </div>
             </div>
         </header>
+
+        <aside class="elastic-body">
+            @RenderBody()
+        </aside>
+        <footer class="elastic-footer">
+            footer
+        </footer>
     </main>
 
-    @RenderBody()
     @await SmidgeHelper.JsHereAsync(debug: UmbracoHostingSettings.Value.Debug)
+    @if (IsSectionDefined("ScriptBlocks"))
+    {
+        @RenderSection("ScriptBlocks", required: false)
+    }
 </body>
 
 </html>

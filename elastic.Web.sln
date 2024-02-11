@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elastic.Umbraco.Framework",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elastic.Web.Models", "Presentation\elastic.Web.Models\elastic.Web.Models.csproj", "{E39A7AC2-8BF3-40F2-8720-8867450ED679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elastic.Web.Services", "Presentation\elastic.Web.Services\elastic.Web.Services.csproj", "{E8DC8E67-2698-4F42-8E8F-FB31BF939719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elastic.Web.Services", "Presentation\elastic.Web.Services\elastic.Web.Services.csproj", "{E8DC8E67-2698-4F42-8E8F-FB31BF939719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

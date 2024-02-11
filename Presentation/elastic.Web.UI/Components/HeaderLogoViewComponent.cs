@@ -1,5 +1,5 @@
 ﻿using elastic.Web.Models;
-using elastic.Web.Models.Dto;
+using elastic.Web.Models.ViewModels;
 using elastic.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 

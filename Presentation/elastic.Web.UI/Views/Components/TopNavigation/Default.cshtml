@@ -1,0 +1,25 @@
+﻿@model List<RootMenuItemBlock>
+
+<nav class="elastic-mega-menu">
+    <ul>
+        @foreach (var rootItem in Model)
+        {
+            <li>
+                <a href="@(rootItem.RootMenuItemBlockUrl?.Url ?? "#")" title="@rootItem.RootMenuItemBlockUrl?.Name" target="@(rootItem.RootMenuItemBlockUrl?.Target ?? "_self")">
+                    @rootItem.RootMenuItemBlockTitle
+                    @if (rootItem.RootMenuItemBlockGrid.Count > 0)
+                    {
+                        <i class="fa-solid fa-chevron-down"></i>
+                    }
+                </a>
+
+                @if (rootItem.RootMenuItemBlockGrid.Count > 0)
+                {
+
+                    @await Html.GetBlockGridHtmlAsync(rootItem.RootMenuItemBlockGrid, template: "megamenu.default")
+
+                }
+            </li>
+        }
+    </ul>
+</nav>

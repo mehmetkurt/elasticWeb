@@ -1,0 +1,83 @@
+@import '../_utils';
+
+:root {
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-top-offset: calc(100% - 60px);
+    --swiper-navigation-sides-offset: 0;
+    --swiper-navigation-color: #{$white};
+}
+
+.swiper {
+    &.component {
+        &.slider {
+            position: relative;
+            background-color:$gray-100;
+            [class^="swiper-button-"] {
+                background-color: $orange;
+                top: initial;
+                left: initial;
+                bottom: 0;
+                right: 0;
+                width: 60px;
+                height: 60px;
+
+                &[class$="prev"] {
+                    right: 60px;
+                    border-top-left-radius: 100px;
+                    width: auto;
+                    padding-right: 20px;
+
+                    &:after {
+                        padding-left: 40px;
+                    }
+                }
+
+                &[class$="next"] {
+                }
+            }
+
+            .component-item {
+                padding: 100px;
+
+                .slider-info {
+                    &-head {
+                        margin: 0;
+                        padding: 0;
+                        line-height: 70px;
+
+                        span {
+                            font-size: 55px;
+                            font-weight: 300;
+
+                            &.br {
+                                display: block;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    &-buttons {
+                        margin-top: 50px;
+                        display: flex;
+                        gap: 20px;
+
+                        .btn {
+                            font-size: 16px;
+                            color: $white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            padding: 15px 20px;
+                            font-weight: bold;
+
+                            i {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

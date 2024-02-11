@@ -1,0 +1,9 @@
+﻿@model BlockGridItem<SingleColumnBlock>
+
+@{
+    var hasImageBlock = Model.Areas.SelectRecursive(p => p.SelectMany(p => p.Areas));
+}
+
+<section class="elastic-column elastic-single-column">
+    @await Html.GetBlockGridItemAreasHtmlAsync(Model, template: "megamenu.areas")
+</section>

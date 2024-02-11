@@ -1,0 +1,4 @@
+<a href="javascript:return;" title="test" target="_self" class="flash" ng-click="block.edit()">
+    {{mediaItem = (block.data.ImageBlockImage[0].mediaKey | mediaItemResolver); "" }}
+    <img ng-if="mediaItem !== null" ng-src="{{mediaItem.mediaLink}}" alt="{{mediaItem.name}}" draggable="false" />
+</a>

@@ -1,5 +1,5 @@
 ﻿using elastic.Web.Models;
-using elastic.Web.Models.Dto;
+using elastic.Web.Models.ViewModels;
 using elastic.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,10 +19,10 @@ public class TitleViewComponent
             return Content("");
 
 
-        if (_commonService.CurrentContent is not IPageTitleComposition)
+        if (_commonService.CurrentContent is not IMetaInformationComposition)
             return Content("");
 
-        var content = _commonService.CurrentContent as IPageTitleComposition;
+        var content = _commonService.CurrentContent as IMetaInformationComposition;
         var model = new TitleViewModel
         {
             Title = content.PageTitleCompositionTitle,

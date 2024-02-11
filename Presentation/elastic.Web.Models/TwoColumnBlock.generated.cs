@@ -18,24 +18,14 @@ using Umbraco.Extensions;
 
 namespace elastic.Web.Models
 {
-	// Mixin Content Type with alias "PageTitleComposition"
-	/// <summary>Page Title</summary>
-	public partial interface IPageTitleComposition : IPublishedElement
-	{
-		/// <summary>Page Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string PageTitleCompositionTitle { get; }
-	}
-
-	/// <summary>Page Title</summary>
-	[PublishedModel("PageTitleComposition")]
-	public partial class PageTitleComposition : PublishedElementModel, IPageTitleComposition
+	/// <summary>Two Column Block</summary>
+	[PublishedModel("TwoColumnBlock")]
+	public partial class TwoColumnBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
-		public new const string ModelTypeAlias = "PageTitleComposition";
+		public new const string ModelTypeAlias = "TwoColumnBlock";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
@@ -44,32 +34,19 @@ namespace elastic.Web.Models
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<PageTitleComposition, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<TwoColumnBlock, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public PageTitleComposition(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public TwoColumnBlock(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
 		}
 
 		// properties
-
-		///<summary>
-		/// Page Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("pageTitleCompositionTitle")]
-		public virtual string PageTitleCompositionTitle => GetPageTitleCompositionTitle(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Page Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.0.3+a0f3c15")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPageTitleCompositionTitle(IPageTitleComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageTitleCompositionTitle");
 	}
 }

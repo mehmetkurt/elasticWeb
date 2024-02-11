@@ -1,0 +1,16 @@
+﻿@model BlockGridItem<MenuItemBlock>
+
+@{
+    var link = Model.Content.MenuItemBlockLink;
+}
+
+<section class="menu-item">
+    <a href="@(link?.Url ?? "#")" title="@(link?.Name ?? "#")" target="@(link?.Target ?? "_self")">
+        <i class="fa-fw fa-duotone fa-@(Model.Content.MenuItemBlockIcon)"></i> <span>
+            @Model.Content.MenuItemBlockTitle
+        <span class="description">
+            @Model.Content.MenuItemBlockDescription
+        </span>
+    </span>
+</a>
+</section>

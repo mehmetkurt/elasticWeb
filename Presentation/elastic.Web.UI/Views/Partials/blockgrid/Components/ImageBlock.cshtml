@@ -1,0 +1,16 @@
+﻿@model BlockGridItem<ImageBlock>
+
+@{
+    var image = Model.Content.ImageBlockImage;
+    if (image is not null)
+    {
+        var link = Model.Content.ImageBlockLink;
+        <a href="@(link?.Url ?? "#")" title="@(link?.Name ?? "#")" target="@(link?.Target ?? "_self")" class="flash">
+            <img class="image" src="@image.GetCropUrl(width:600)" title="@image.Name" alt="@image.Name" />
+        </a>
+    }
+    else
+    {
+        return;
+    }
+}
